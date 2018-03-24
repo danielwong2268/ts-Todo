@@ -1,0 +1,17 @@
+
+
+have three states for todos, be able to filter by them
+have a button that generates the story points estimation
+have a story point counter
+
+incorporate some mock fetch call to merge in todos from JIRA
+update story points for something that is not undone
+
+
+
+design:
+- components dir
+  - For components, define a types file that contain public types
+  - prop interfaces should stay with the component...
+- models dir: this contains the data modelling (json)
+  - contain factories, interfaces, types, etc...
