@@ -1,10 +1,9 @@
 import * as React from 'react'
 import { map } from 'lodash'
-import { Status } from '../../models/Todo'
+import TodoStatus from '../../../models/Todo/TodoStatus'
+import { StoreProps } from './TodoFilterOptionsContainer'
 
-import { UpdateFilter } from '../../actions/updateFilter'
-
-interface TodoFilterOption {
+interface TodoFilterOptionProps {
   selected: boolean;
   onClick: () => void;
   children: string;
@@ -14,7 +13,7 @@ const TodoFilterOption = ({
   children,
   selected,
   onClick
-}: TodoFilterOption) => {
+}: TodoFilterOptionProps) => {
   const className = `mh1${selected ? ' fw8 red' : ''}`
 
   return (
@@ -24,15 +23,10 @@ const TodoFilterOption = ({
   )
 }
 
-interface TodoFilterOptionsProps {
-  currentFilter: Status | null;
-  updateFilter: (nextFilter: Status | null) => UpdateFilter;
-}
-
 const TodoFilterOptions = ({
   currentFilter,
   updateFilter
-}: TodoFilterOptionsProps) => {
+}: StoreProps) => {
   return (
     <div className="mt4">
       <TodoFilterOption
@@ -42,12 +36,12 @@ const TodoFilterOptions = ({
         ALL
       </TodoFilterOption>
       {
-        map(Status, (status) => {
+        map(TodoStatus, (status) => {
           return (
             <TodoFilterOption
               selected={currentFilter === status}
               key={status}
-              onClick={() => updateFilter(Status[status])}
+              onClick={() => updateFilter(TodoStatus[status])}
             >
               {status}
             </TodoFilterOption>

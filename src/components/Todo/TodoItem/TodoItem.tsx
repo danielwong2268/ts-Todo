@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { Todo, Status } from '../../models/Todo'
+import TodoStatus from '../../../models/Todo/TodoStatus'
+import Todo from '../../../models/Todo/Todo'
 
 interface TodoProps {
   todo: Todo;
-  updateStatus: (status: Status) => void;
+  updateStatus: (status: TodoStatus) => void;
 }
 
 class TodoItem extends React.Component<TodoProps> {
@@ -11,7 +12,7 @@ class TodoItem extends React.Component<TodoProps> {
     const { updateStatus } = this.props
     const { value } = e.currentTarget
 
-    updateStatus(value as Status)
+    updateStatus(value as TodoStatus)
   }
 
   render() {
@@ -22,9 +23,9 @@ class TodoItem extends React.Component<TodoProps> {
         <span>{todo.text}</span>
         <span className="ml5">story points: {todo.storyPoints}</span>
         <select className="ml5" value={todo.status} onChange={this.updateTodoState}>
-          <option value={Status.CREATED}>Created</option>
-          <option value={Status.IN_PROGRESS}>In Progress</option>
-          <option value={Status.DONE}>Done</option>
+          <option value={TodoStatus.CREATED}>Created</option>
+          <option value={TodoStatus.IN_PROGRESS}>In Progress</option>
+          <option value={TodoStatus.DONE}>Done</option>
         </select>
       </div>
     )

@@ -1,14 +1,9 @@
 import * as React from 'react';
-import { Todo, Status } from '../../models/Todo'
-import TodoItem from '../TodoItem'
-import { UpdateStatus } from '../../actions/updateStatus'
+import TodoStatus from '../../../models/Todo/TodoStatus'
+import TodoItem from '../TodoItem/TodoItem'
+import { StoreProps } from './TodoItemsContainer'
 
-export interface TodoItemProps {
-  todos: Todo[];
-  updateStatus: (index: number, filterStatus: Status) => UpdateStatus;
-}
-
-const TodoItems = ({ todos, updateStatus }: TodoItemProps) => {
+const TodoItems = ({ todos, updateStatus }: StoreProps) => {
   let content
 
   if (todos.length === 0) {
@@ -21,7 +16,7 @@ const TodoItems = ({ todos, updateStatus }: TodoItemProps) => {
             <TodoItem
               key={i}
               todo={todo}
-              updateStatus={(status: Status) => updateStatus(i, status)}
+              updateStatus={(status: TodoStatus) => updateStatus(i, status)}
             />
           )
         }

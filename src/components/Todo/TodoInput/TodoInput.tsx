@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { AddTodo } from '../../actions/addTodo';
+import { StoreProps } from './TodoInputContainer'
 
 enum RejectionReason {
   NO_DESCRIPTION = 'Please enter a description',
@@ -7,17 +7,13 @@ enum RejectionReason {
   VALID = 'VALID'
 }
 
-interface AppProps {
-  addTodo: (text: string, storyPoints: number) => AddTodo;
-}
-
 interface AppState {
   todoTextInput: string;
   storyPoints: number;
 }
 
-export default class TodoInput extends React.Component<AppProps, AppState> {
-  constructor(props: AppProps) {
+export default class TodoInput extends React.Component<StoreProps, AppState> {
+  constructor(props: StoreProps) {
     super(props)
 
     this.state = {

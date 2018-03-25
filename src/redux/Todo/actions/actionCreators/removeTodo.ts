@@ -1,4 +1,4 @@
-import ActionEnumTypes from './actionEnumTypes';
+import ActionEnumTypes from '../enumTypes';
 
 export interface RemoveTodo {
   type: ActionEnumTypes.REMOVE_TODO,

@@ -1,4 +1,4 @@
-import ActionEnumTypes from './actionEnumTypes';
+import ActionEnumTypes from '../enumTypes';
 
 export interface AddTodo {
   type: ActionEnumTypes.ADD_TODO,

@@ -1,10 +1,11 @@
 import * as React from 'react'
-import '../../App.css';
-import TodoInput from '../TodoInput'
-import TodoItems from '../TodoItems'
-import TodoFilterOptions from '../TodoFilterOptions'
+import './App.css'
 
-const logo = require('../../logo.svg');
+import TodoInput from './components/Todo/TodoInput/TodoInputContainer'
+import TodoItems from './components/Todo/TodoItems/TodoItemsContainer'
+import TodoFilterOptions from './components/Todo/TodoFilterOptions/TodoFilterOptionsContainer'
+
+const logo = require('./logo.svg');
 
 class App extends React.Component {
   render() {
