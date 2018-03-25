@@ -1,9 +1,8 @@
 # ts-Todo
-todo app
+A todo app built in Typescript, React, Redux.
 
 To run:
 
 `npm install`
-
 
 `npm start`
