@@ -1,5 +1,4 @@
 import { connect } from 'react-redux'
-import { bindActionCreators, Dispatch } from 'redux'
 import { StoreState } from '../../../redux/store'
 import Todo from '../../../models/Todo/Todo'
 import TodoStatus from '../../../models/Todo/TodoStatus'
@@ -31,11 +30,5 @@ interface DispatchProps {
   updateStatus: typeof updateStatus;
 }
 
-const mapDispatchToProps = (dispatch: Dispatch<StoreState>): DispatchProps => {
-  return {
-    updateStatus: bindActionCreators(updateStatus, dispatch)
-  }
-}
-
 export type StoreProps = StateProps & DispatchProps 
-export default connect(mapStateToProps, mapDispatchToProps)(TodoItems);
+export default connect(mapStateToProps, { updateStatus })(TodoItems);

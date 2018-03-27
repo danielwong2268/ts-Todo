@@ -1,5 +1,4 @@
 import { connect } from 'react-redux'
-import { bindActionCreators, Dispatch } from 'redux'
 import { StoreState } from '../../../redux/store'
 import { updateFilter } from '../../../redux/Todo/actions/todoActions'
 import TodoFilterOptions from './TodoFilterOptions'
@@ -21,11 +20,4 @@ const mapStateToProps = (state: StoreState): StateProps => {
   }
 }
 
-const mapDispatchToProps = (dispatch: Dispatch<StoreState>): DispatchProps => {
-  return {
-    updateFilter: bindActionCreators(updateFilter, dispatch)
-  }
-
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(TodoFilterOptions)
+export default connect(mapStateToProps, { updateFilter })(TodoFilterOptions)
