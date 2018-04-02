@@ -1,9 +1,9 @@
 import TodoActionEnumTypes from '../actions/enumTypes'
 import TodoAction, { AddTodo, RemoveTodo, UpdateStatus, UpdateFilter } from '../actions/TodoActionTypes'
 
-import TodoStatus from '../../../models/Todo/TodoStatus';
-import Todo from '../../../models/Todo/Todo';
-import todoFactory from '../../../models/Todo/todoFactory';
+import TodoStatus from 'models/Todo/TodoStatus';
+import Todo from 'models/Todo/Todo';
+import todoFactory from 'models/Todo/todoFactory';
 
 export interface TodoState {
   todos: Todo[];

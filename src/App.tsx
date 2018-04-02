@@ -1,26 +1,22 @@
 import * as React from 'react'
+import { Router } from 'react-router'
+import { createBrowserHistory } from 'history'
 import './App.css'
 
-import TodoInput from './components/Todo/TodoInput/TodoInputContainer'
-import TodoItems from './components/Todo/TodoItems/TodoItemsContainer'
-import TodoFilterOptions from './components/Todo/TodoFilterOptions/TodoFilterOptionsContainer'
+import Routes from './routes'
+import Sidebar from 'components/Sidebar/Sidebar'
+import Header from 'components/Header/Header'
 
-const logo = require('./logo.svg');
-
-class App extends React.Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header mb5">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to My Typescript Todo App</h1>
-        </header>
-        <TodoInput />
-        <TodoItems />
-        <TodoFilterOptions />
+const App: React.SFC = () => (
+  <div className="App">
+    <Header />
+    <Router history={createBrowserHistory()}>
+      <div className="flex justify-center">
+        <Sidebar className="w-20 ma2 pa4" />
+        <Routes />
       </div>
-    )
-  }
-}
+    </Router>
+ </div>
+)
 
-export default App;
+export default App

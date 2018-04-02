@@ -1,5 +1,5 @@
 import * as React from 'react';
-import TodoStatus from '../../../models/Todo/TodoStatus'
+import TodoStatus from 'models/Todo/TodoStatus'
 import TodoItem from '../TodoItem/TodoItem'
 import { StoreProps } from './TodoItemsContainer'
 

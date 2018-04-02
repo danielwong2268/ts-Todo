@@ -3,14 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/prop-types": "^15.5.2",
+    "classnames": "^2.2.5",
+    "formik": "^0.11.11",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "react-scripts-ts": "2.14.0",
     "redux": "^3.7.2",
     "redux-form": "^7.3.0",
-    "tachyons": "^4.9.1"
+    "tachyons": "^4.9.1",
+    "yup": "^0.24.1"
   },
   "scripts": {
     "start": "react-scripts-ts start",
@@ -19,12 +24,16 @@
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.3",
     "@types/jest": "^22.2.0",
     "@types/lodash": "^4.14.105",
     "@types/node": "^9.4.7",
     "@types/react": "^16.0.40",
     "@types/react-dom": "^16.0.4",
     "@types/react-redux": "^5.0.15",
+    "@types/react-router": "^4.0.23",
+    "@types/react-router-dom": "^4.2.6",
+    "@types/yup": "^0.24.2",
     "typescript": "^2.7.2"
   }
 }

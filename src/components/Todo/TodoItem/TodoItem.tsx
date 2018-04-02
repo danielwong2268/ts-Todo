@@ -1,6 +1,6 @@
 import * as React from 'react';
-import TodoStatus from '../../../models/Todo/TodoStatus'
-import Todo from '../../../models/Todo/Todo'
+import TodoStatus from 'models/Todo/TodoStatus'
+import Todo from 'models/Todo/Todo'
 
 interface TodoProps {
   todo: Todo;

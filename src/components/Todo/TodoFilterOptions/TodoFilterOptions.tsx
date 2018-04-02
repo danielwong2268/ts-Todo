@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { map } from 'lodash'
-import TodoStatus from '../../../models/Todo/TodoStatus'
+import TodoStatus from 'models/Todo/TodoStatus'
 import { StoreProps } from './TodoFilterOptionsContainer'
 
 interface TodoFilterOptionProps {

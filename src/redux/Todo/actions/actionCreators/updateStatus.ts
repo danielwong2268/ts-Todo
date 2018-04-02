@@ -1,5 +1,5 @@
 import ActionEnumTypes from '../enumTypes'
-import TodoStatus from '../../../../models/Todo/TodoStatus'
+import TodoStatus from 'models/Todo/TodoStatus'
 
 export interface UpdateStatus {
   type: ActionEnumTypes.UPDATE_STATUS;
