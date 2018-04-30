@@ -1,16 +1,9 @@
-import ActionEnumTypes from '../enumTypes';
-
-export interface AddTodo {
-  type: ActionEnumTypes.ADD_TODO,
-  todoInformation: {
-    text: string;
-    storyPoints: number;
-  }
-}
+import { TodoActionConstants } from '../TodoActionTypes';
+import AddTodo from '../TodoActionTypes'
 
 export const addTodo = (text: string, storyPoints: number): AddTodo => {
   return {
-    type: ActionEnumTypes.ADD_TODO,
+    type: TodoActionConstants.ADD_TODO,
     todoInformation: {
       text,
       storyPoints

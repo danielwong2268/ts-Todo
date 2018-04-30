@@ -1,13 +1,9 @@
-import ActionEnumTypes from '../enumTypes';
-
-export interface RemoveTodo {
-  type: ActionEnumTypes.REMOVE_TODO,
-  index: number
-}
+import { TodoActionConstants } from '../TodoActionTypes';
+import RemoveTodo from '../TodoActionTypes';
 
 export const removeTodo = (index: number): RemoveTodo => {
   return {
-    type: ActionEnumTypes.REMOVE_TODO,
+    type: TodoActionConstants.REMOVE_TODO,
     index
   }
 } 

@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import { StoreState } from '../../../redux/store'
 import Todo from '../../../models/Todo/Todo'
 import TodoStatus from '../../../models/Todo/TodoStatus'
-import { updateStatus } from '../../../redux/Todo/actions/todoActions'
+import { updateStatus } from '../../../redux/Todo/actions/todoActionCreators'
 import TodoItems from './TodoItems'
 
 const generateVisibleTodos = (allTodos: Todo[], currentFilterStatus: TodoStatus | null): Todo[] => {

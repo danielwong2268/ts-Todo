@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { addTodo } from '../../../redux/Todo/actions/todoActions'
+import { addTodo } from '../../../redux/Todo/actions/todoActionCreators'
 import TodoInput from './TodoInput'
 
 interface DispatchProps {

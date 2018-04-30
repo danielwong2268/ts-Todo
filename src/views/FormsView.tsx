@@ -3,7 +3,6 @@ import * as Yup from 'yup';
 // import * as classnames from 'classnames'
 import { withFormik, InjectedFormikProps } from 'formik'
 
-
 /**
  * This is WIP
  */

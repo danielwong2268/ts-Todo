@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import { StoreState } from '../../../redux/store'
-import { updateFilter } from '../../../redux/Todo/actions/todoActions'
+import { updateFilter } from '../../../redux/Todo/actions/todoActionCreators'
 import TodoFilterOptions from './TodoFilterOptions'
 import TodoStatus from '../../../models/Todo/TodoStatus'
 

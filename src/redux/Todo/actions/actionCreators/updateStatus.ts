@@ -1,15 +1,10 @@
-import ActionEnumTypes from '../enumTypes'
+import { TodoActionConstants } from '../TodoActionTypes';
 import TodoStatus from 'models/Todo/TodoStatus'
-
-export interface UpdateStatus {
-  type: ActionEnumTypes.UPDATE_STATUS;
-  filterType: TodoStatus;
-  index: number;
-}
+import UpdateStatus from '../TodoActionTypes'
 
 export const updateStatus = (index: number, filterType: TodoStatus): UpdateStatus => {
   return {
-    type: ActionEnumTypes.UPDATE_STATUS,
+    type: TodoActionConstants.UPDATE_STATUS,
     index,
     filterType
   }

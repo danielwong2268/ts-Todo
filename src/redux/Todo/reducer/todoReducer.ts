@@ -1,6 +1,11 @@
-import TodoActionEnumTypes from '../actions/enumTypes'
-import TodoAction, { AddTodo, RemoveTodo, UpdateStatus, UpdateFilter } from '../actions/TodoActionTypes'
-
+import {
+  TodoAction,
+  AddTodo,
+  RemoveTodo,
+  UpdateStatus,
+  UpdateFilter,
+  TodoActionConstants
+} from '../actions/TodoActionTypes'
 import TodoStatus from 'models/Todo/TodoStatus';
 import Todo from 'models/Todo/Todo';
 import todoFactory from 'models/Todo/todoFactory';
@@ -71,13 +76,13 @@ const updateFilter = (state: ImmutableTodoState, action: UpdateFilter): Immutabl
 
 const reducer = (state = initialState, action: TodoAction): ImmutableTodoState => {
   switch (action.type) {
-    case TodoActionEnumTypes.ADD_TODO:
+    case TodoActionConstants.ADD_TODO:
       return addTodo(state, action)
-    case TodoActionEnumTypes.REMOVE_TODO:
+    case TodoActionConstants.REMOVE_TODO:
       return removeTodo(state, action)
-    case TodoActionEnumTypes.UPDATE_STATUS:
+    case TodoActionConstants.UPDATE_STATUS:
       return updateStatus(state, action)
-    case TodoActionEnumTypes.UPDATE_FILTER:
+    case TodoActionConstants.UPDATE_FILTER:
       return updateFilter(state, action)
     default:
       return state
